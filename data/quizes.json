@@ -1,0 +1,368 @@
+{
+   "quiz_1":[
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"easy",
+         "question":"Which of the following is not the name of a &quot;Bond Girl&quot;? ",
+         "correct_answer":"Vanessa Kensington",
+         "incorrect_answers":[
+            "Pam Bouvier",
+            "Mary Goodnight",
+            "Wai Lin"
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"easy",
+         "question":"Which movie released in 2016 features Superman and Batman fighting?",
+         "correct_answer":"Batman v Superman: Dawn of Justice",
+         "incorrect_answers":[
+            "Batman v Superman: Superapocalypse",
+            "Batman v Superman: Black of Knight",
+            "Batman v Superman: Knightfall"
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"easy",
+         "question":"Daniel Radcliffe became a global star in the film industry due to his performance in which film franchise?",
+         "correct_answer":"Harry Potter",
+         "incorrect_answers":[
+            "Ted",
+            "Spy Kids",
+            "Pirates of the Caribbean "
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"easy",
+         "question":"What name did Tom Hanks give to his volleyball companion in the film `Cast Away`?",
+         "correct_answer":"Wilson",
+         "incorrect_answers":[
+            "Friday",
+            "Jones",
+            "Billy"
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"easy",
+         "question":"Who directed the 2015 movie &quot;The Revenant&quot;?",
+         "correct_answer":"Alejandro G. I&ntilde;&aacute;rritu",
+         "incorrect_answers":[
+            "Christopher Nolan",
+            "David Fincher",
+            "Wes Anderson"
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"easy",
+         "question":"What is the orange and white bot&#039;s name in &quot;Star Wars: The Force Awakens&quot;?",
+         "correct_answer":"BB-8",
+         "incorrect_answers":[
+            "BB-3",
+            "AA-A",
+            "R2-D2"
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"easy",
+         "question":"Which movie includes a giant bunny-like spirit who has magic powers including growing trees?",
+         "correct_answer":"My Neighbor Totoro",
+         "incorrect_answers":[
+            "Hop",
+            "Rise of the Guardians",
+            "Alice in Wonderland"
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"easy",
+         "question":"What was the first monster to appear alongside Godzilla?",
+         "correct_answer":"Anguirus",
+         "incorrect_answers":[
+            "King Kong",
+            "Mothra",
+            "King Ghidora"
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"easy",
+         "question":"In the 1992 film &quot;Army of Darkness&quot;, what name does Ash give to his double-barreled shotgun?",
+         "correct_answer":"Boomstick",
+         "incorrect_answers":[
+            "Bloomstick",
+            "Blastbranch",
+            "2-Pump Chump"
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"easy",
+         "question":"What was the first feature-length computer-animated movie?",
+         "correct_answer":"Toy Story",
+         "incorrect_answers":[
+            "Tron",
+            "Lion king",
+            "101 Dalmatians"
+         ]
+      }
+   ],
+   "quiz_2":[
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"medium",
+         "question":"In the movie &ldquo;The Iron Giant,&rdquo; this character is the protagonist.",
+         "correct_answer":"Hogarth Hughes",
+         "incorrect_answers":[
+            "Kent Mansley",
+            "Dean McCoppin",
+            "Annie Hughes"
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"medium",
+         "question":"Who directed the 1973 film &quot;American Graffiti&quot;?",
+         "correct_answer":"George Lucas",
+         "incorrect_answers":[
+            "Ron Howard",
+            "Francis Ford Coppola",
+            "Steven Spielberg"
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"medium",
+         "question":"In the 1971 film &quot;Willy Wonka &amp; the Chocolate Factory&quot;, who played Willy Wonka?",
+         "correct_answer":"Gene Wilder",
+         "incorrect_answers":[
+            "Shia LeBouf",
+            "Peter Ostrum",
+            "Johnny Depp"
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"medium",
+         "question":"The 1939 movie &quot;The Wizard of Oz&quot; contained a horse that changed color, what material did they use to achieve this effect?",
+         "correct_answer":"Gelatin",
+         "incorrect_answers":[
+            "Dye",
+            "Paint",
+            "CGI Effect"
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"medium",
+         "question":"What city did the monster attack in the film, &quot;Cloverfield&quot;?",
+         "correct_answer":"New York, New York",
+         "incorrect_answers":[
+            "Las Vegas, Nevada",
+            "Chicago, Illinois",
+            "Orlando, Florida"
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"medium",
+         "question":"Who played the Cenobite called &quot;Pinhead&quot; in the original Hellraiser films?",
+         "correct_answer":"Doug Bradley",
+         "incorrect_answers":[
+            "Doug Jones",
+            "Doug Savant",
+            "Doug Benson"
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"medium",
+         "question":"Which famous singer was portrayed by actor Kevin Spacey in the 2004 biographical film &quot;Beyond the Sea&quot;?",
+         "correct_answer":"Bobby Darin",
+         "incorrect_answers":[
+            "Louis Armstrong",
+            "Frank Sinatra",
+            "Dean Martin"
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"medium",
+         "question":"Which documentary film maker wrote and starred in the film &quot;My Scientology Movie&quot; which first debuted in 2015?",
+         "correct_answer":"Louis Theroux",
+         "incorrect_answers":[
+            "Errol Morris",
+            "Joe Berlinger",
+            "Adam Curtis"
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"medium",
+         "question":"About how much money did it cost for Tommy Wiseau to make his masterpiece &quot;The Room&quot; (2003)?",
+         "correct_answer":"$6 Million",
+         "incorrect_answers":[
+            "$20,000",
+            "$1 Million",
+            "$10 Million"
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"medium",
+         "question":"What is the birth name of Michael Keaton?",
+         "correct_answer":"Michael Douglas",
+         "incorrect_answers":[
+            "Michael Fox",
+            "Michael Richards",
+            "Michael Kane"
+         ]
+      }
+   ],
+   "quiz_3":[
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"hard",
+         "question":"What was the name of the planet in &quot;Aliens&quot;?",
+         "correct_answer":"LV-426",
+         "incorrect_answers":[
+            "Weyland Yutani Corporation Base",
+            "FR-838",
+            "DI-621"
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"hard",
+         "question":"What did the first moving picture depict?",
+         "correct_answer":"A galloping horse",
+         "incorrect_answers":[
+            "A woman in a dress",
+            "A man walking",
+            "A crackling fire"
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"hard",
+         "question":"In order to cut costs, what were most of the extras of Mad Max (1979) paid with?",
+         "correct_answer":"Beer",
+         "incorrect_answers":[
+            "Fast food",
+            "Food stamps",
+            "They weren&#039;t paid"
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"hard",
+         "question":"In the &quot;Jurassic Park&quot; universe, what was the first dinosaur cloned by InGen in 1986?",
+         "correct_answer":"Velociraptor",
+         "incorrect_answers":[
+            "Triceratops",
+            "Troodon",
+            "Brachiosaurus"
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"hard",
+         "question":"What three movies, in order from release date, make up the &quot;Dollars Trilogy&quot;?",
+         "correct_answer":"&quot;A Fistful of Dollars&quot;, &quot;For a Few Dollars More&quot;, &quot;The Good, the Bad, and the Ugly&quot;",
+         "incorrect_answers":[
+            "&quot;The Good, the Bad, and the Ugly&quot;, &quot;For A Few Dollars More&quot;, &quot;A Fistful of Dollars&quot;",
+            "&quot;For a Few Dollars More&quot;, &quot;The Good, the Bad, and the Ugly&quot;, &quot;A Fistful of Dollars&quot;",
+            "&quot;For a Few Dollars More&quot;, &quot;A Fistful of Dollars&quot;, &quot;The Good, the Bad, and the Ugly&quot;"
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"hard",
+         "question":"Which of the following films was directed by Ivan Reitman, written by Gary Ross, featured Kevin Kline, and was released in 1993?",
+         "correct_answer":"Dave",
+         "incorrect_answers":[
+            "John",
+            "Will",
+            "Carl"
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"hard",
+         "question":"In the Friday The 13th series, what year did Jason drown in?",
+         "correct_answer":"1957",
+         "incorrect_answers":[
+            "1955",
+            "1953",
+            "1959"
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"hard",
+         "question":"In the film &quot;Harry Potter and the Order of The Phoenix&quot;, why was Harry Potter&#039;s scream, after Sirius Black died, muted?",
+         "correct_answer":"Too Agonizing",
+         "incorrect_answers":[
+            "Too Loud",
+            "Too Harsh",
+            "Too Violent"
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"hard",
+         "question":"In the 1974 Christmas flick &quot;The Year Without a Santa Claus,&quot; what are the names of the two elves who help Mrs. Claus save Christmas?",
+         "correct_answer":"Jingle &amp; Jangle",
+         "incorrect_answers":[
+            "Buddy &amp; Bobby",
+            "Holly &amp; Jolly",
+            "Snowflake &amp; Icicle"
+         ]
+      },
+      {
+         "category":"Entertainment: Film",
+         "type":"multiple",
+         "difficulty":"hard",
+         "question":"What was the wifi password given to Stephen Strange in Doctor Strange?",
+         "correct_answer":"Shambala",
+         "incorrect_answers":[
+            "Peace",
+            "Ancient",
+            "Chakra"
+         ]
+      }
+   ]
+}
