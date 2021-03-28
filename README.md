@@ -1,4 +1,4 @@
-# Orwell's Trivia
+# Dysto Trivia
 A trivia game that shocks players on wrong answers. Pretty dystopian right? [cringes]
 
 Triva API Data: https://opentdb.com/api_config.php
