@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dysto Trivia</title>
+    <style>
+        #posi-choices {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="/check-answer">
+	    {{params}}
+        {% for row in params %}
+            <h2>{{ row.question }}</h2>
+            <h3>Category: {{ row.category }}</h3>
+            <h3>Difficulty: {{ row.difficulty }}</h3>
+            <div id="posi-choices">
+            {% if row.type == 'multiple' %}
+                {% for c in row.incorrect_answers %}
+                    <label>
+                        <input type='radio' value='{{c}}' name='choice'/>
+                        {{c}}
+                    </label>
+                {% endfor %}
+                    <label>
+                        <input type='radio' value='{{row.correct_answer}}' name='choice'/>
+                        {{row.correct_answer}}
+                    </label>
+                {% else %}
+                    <label>
+                        <input type='radio' value='True' name='choice'/>
+                        True
+                    </label>
+                    <label>
+                        <input type='radio' value='False' name='choice'/>
+                        False
+                    </label>
+            {% endif %}
+            </div>
+        {% endfor %}
+        <br>
+        <input type="submit" value="Submit Answer">
+    </form>
+    <script>
+        var radios = document.getElementById('posi-choices');
+        for (var i = radios.children.length; i >= 0; i--) {
+            radios.appendChild(radios.children[Math.random() * i | 0]);
+        }
+    </script>
+</body>
+</html>
