@@ -10,20 +10,25 @@
             display: grid;
             grid-template-columns: 1fr;
         }
+	.t-f {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+	label {
+		font-size: 16pt!important;
+		padding: 1rem;
+	}
     </style>
 </head>
 <body>
     <form method="post" action="/check-answer">
-	    {{params}}
         {% for row in params %}
             <h2>{{ row.question }}</h2>
-            <h3>Category: {{ row.category }}</h3>
-            <h3>Difficulty: {{ row.difficulty }}</h3>
-            <div id="posi-choices">
             {% if row.type == 'multiple' %}
+            	<div id="posi-choices">
                 {% for c in row.incorrect_answers %}
                     <label>
-                        <input type='radio' value='{{c}}' name='choice'/>
+                        <input type='radio' value='{{c}}' name='choice' required/>
                         {{c}}
                     </label>
                 {% endfor %}
@@ -31,20 +36,24 @@
                         <input type='radio' value='{{row.correct_answer}}' name='choice'/>
                         {{row.correct_answer}}
                     </label>
+		</div>
                 {% else %}
+		    <div class="t-f">
                     <label>
-                        <input type='radio' value='True' name='choice'/>
+                        <input type='radio' value='True' name='choice' required/>
                         True
                     </label>
                     <label>
                         <input type='radio' value='False' name='choice'/>
                         False
                     </label>
+		    </div>
             {% endif %}
-            </div>
+	    <br>
+	    <input type="submit" value="Submit Answer">
+            <h3>Category: {{ row.category }}</h3>
+            <h3>Difficulty: {{ row.difficulty }}</h3>
         {% endfor %}
-        <br>
-        <input type="submit" value="Submit Answer">
     </form>
     <script>
         var radios = document.getElementById('posi-choices');
