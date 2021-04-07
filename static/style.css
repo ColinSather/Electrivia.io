@@ -1,0 +1,46 @@
+#posi-choices {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.t-f {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+label {
+    font-size: 16pt!important;
+    padding: 1rem;
+}
+
+.text-left {
+    text-align: left!important;
+}
+.display-flex {
+  width: 100vh!important;
+  display: flex;
+  justify-content: space-between;
+}
+/* 
+Vertically center div by StackOverflow user Billbad 
+https://stackoverflow.com/questions/396145/how-to-vertically-center-a-div-element-for-all-browsers-using-css#:~:text=you%20need%20to%20set%20the,specify%20the%20top%20as%2050%25.
+*/
+.outer {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .middle {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    text-align: center;
+    /*whatever width you want*/
+  }

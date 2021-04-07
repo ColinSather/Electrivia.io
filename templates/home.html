@@ -1,10 +1,13 @@
-<html>
-	<head>
-	</head>
-	<body>
-
-    		<h1>Welcome to Dysto Trivia</h1>
-
-    		<a href='/rq'><button>Begin the fun & safe trivia game!</button></a>
-	</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+<div class="outer">
+	<div class="middle">
+		<div class="inner">
+			<h1>Welcome to Dysto Trivia</h1>
+			<a href='/rq'>
+				<button>Begin the fun & safe trivia game!</button>
+			</a>
+		</div>
+	</div>
+</div>
+{% endblock %}

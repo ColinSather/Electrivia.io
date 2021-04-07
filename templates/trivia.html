@@ -1,65 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dysto Trivia</title>
-    <style>
-        #posi-choices {
-            display: grid;
-            grid-template-columns: 1fr;
-        }
-	.t-f {
-		display: grid;
-		grid-template-columns: 1fr;
-	}
-	label {
-		font-size: 16pt!important;
-		padding: 1rem;
-	}
-    </style>
-</head>
-<body>
-    <form method="post" action="/check-answer">
-        {% for row in params %}
-            <h2>{{ row.question }}</h2>
-            {% if row.type == 'multiple' %}
-            	<div id="posi-choices">
-                {% for c in row.incorrect_answers %}
-                    <label>
-                        <input type='radio' value='{{c}}' name='choice' required/>
-                        {{c}}
-                    </label>
-                {% endfor %}
-                    <label>
-                        <input type='radio' value='{{row.correct_answer}}' name='choice'/>
-                        {{row.correct_answer}}
-                    </label>
-		</div>
-                {% else %}
-		    <div class="t-f">
-                    <label>
-                        <input type='radio' value='True' name='choice' required/>
-                        True
-                    </label>
-                    <label>
-                        <input type='radio' value='False' name='choice'/>
-                        False
-                    </label>
-		    </div>
-            {% endif %}
-	    <br>
-	    <input type="submit" value="Submit Answer">
-            <h3>Category: {{ row.category }}</h3>
-            <h3>Difficulty: {{ row.difficulty }}</h3>
-        {% endfor %}
-    </form>
-    <script>
-        var radios = document.getElementById('posi-choices');
-        for (var i = radios.children.length; i >= 0; i--) {
-            radios.appendChild(radios.children[Math.random() * i | 0]);
-        }
-    </script>
-</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+<div class="outer">
+<a href="/">Exit</a>
+    <div class="middle">
+        <form method="post" action="/check-answer" class="inner text-left">
+            {% for row in params %}
+                <div class="display-flex">
+                    <h3>Category: {{ row.category }}</h3>
+                    <h3>Difficulty: {{ row.difficulty }}</h3>
+                </div>
+                <h2>{{ row.question }}</h2>
+                {% if row.type == 'multiple' %}
+                    <div id="posi-choices">
+                        {% for c in row.incorrect_answers %}
+                            <label>
+                                <input type='radio' value='{{c}}' name='choice' required/>
+                                {{c}}
+                            </label>
+                        {% endfor %}
+                        <label>
+                            <input type='radio' value='{{row.correct_answer}}' name='choice'/>
+                            {{row.correct_answer}}
+                        </label>
+                    </div>
+                    {% else %}
+                <div class="t-f">
+                        <label>
+                            <input type='radio' value='True' name='choice' required/>
+                            True
+                        </label>
+                        <label>
+                            <input type='radio' value='False' name='choice'/>
+                            False
+                        </label>
+                </div>
+                {% endif %}
+                <br>
+                <input type="submit" value="Submit Answer">
+
+            {% endfor %}
+        </form>
+    </div>
+</div>
+<script>
+    var radios = document.getElementById('posi-choices');
+    for (var i = radios.children.length; i >= 0; i--) {
+        radios.appendChild(radios.children[Math.random() * i | 0]);
+    }
+</script>
+{% endblock %}

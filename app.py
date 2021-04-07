@@ -9,7 +9,7 @@ app = Flask(__name__)
 interface = ChoiceInterface()
 
 # Tens unit activates for 2s
-def tazed():
+def taze():
     led1 = 23
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(led1, GPIO.OUT)
@@ -28,16 +28,20 @@ def index():
 def check_answer():
     user_inp = str(request.values["choice"])
     data = interface.getPossibilities()
-    
-    if data[0]["correct_answer"] != user_inp:
-        print("USER'S ANSWER:", user_inp)
-        print("CORRECT ANSWER:", data[0]["correct_answer"])
-        tazer()
-    else:
-        print("USER'S ANSWER:", user_inp)
-        print("CORRECT ANSWER:", data[0]["correct_answer"])
+    ans = []
+    ans.append(data[0]["question"])
+    ans.append(data[0]["correct_answer"])
+    ans.append(user_inp)
 
-    return redirect("/rq")
+    if data[0]["correct_answer"] != user_inp:
+        print("USER'S ANSWER:", ans[0])
+        print("CORRECT ANSWER:", ans[1])
+        taze()
+        return render_template("result.html", ans=ans)
+    else:
+        print("USER'S ANSWER:", ans[0])
+        print("CORRECT ANSWER:", ans[1])
+        return render_template("result.html", ans=ans)
 
 
 @app.route("/rq")
