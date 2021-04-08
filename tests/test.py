@@ -3,25 +3,9 @@
 This script is only for testing new concepts/ideas
 """
 import RPi.GPIO as GPIO
-import time, random, base64
+import time, random, base64, json, requests
 
-quiz = {
-    "response_code":0,
-    "results":[
-        {
-            "category":"Entertainment: Film",
-            "type":"multiple",
-            "difficulty":"medium",
-            "question":"In the movie &ldquo;The Iron Giant,&rdquo; this character is the protagonist.",
-            "correct_answer":"Hogarth Hughes",
-            "incorrect_answers":[
-                "Kent Mansley",
-                "Dean McCoppin",
-                "Annie Hughes"
-            ]
-        }
-    ]
-}
+api = "https://opentdb.com/api.php?amount=1&encode=base64"
 
 def tazed():
     led1 = 23
@@ -34,15 +18,34 @@ def tazed():
 
 
 def based(message):
-    message_bytes = message.encode('ascii')
-    base64_message = message_bytes.decode('ascii')
-    print(base64_message)
+    hm = {}
+    incorrect_answers = []
+    for x in message["results"]:
+        for k in x.keys():
+            if k != "incorrect_answers":
+                b = bytes(x[k], "utf-8")
+                b = base64.b64decode(b)
+                hm[k] = b.decode()
+            
+            elif k == "incorrect_answers":
+                for choice in x[k]:
+                    b = bytes(choice, "utf-8")
+                    b = base64.b64decode(b)
+                    incorrect_answers.append(b.decode())
+                hm[k] = incorrect_answers
+    return hm
 
 
 if __name__ == "__main__":
+    res = requests.get(api)
+    quiz = res.json()
+    quiz = dict(quiz)
+    #based(bytes(q[0]['question'], "utf-8"))
+    based(quiz)
+    """
     for q in quiz['results']:
-        message = based(q['question'])
-        print(message)
+        print(q['question'])
+        based(q['question'])
         ans = q['correct_answer']
         choices = q['incorrect_answers']
         choices.append(ans)
@@ -59,3 +62,4 @@ if __name__ == "__main__":
         else:
             print("Wrong u dumbass...")
             tazed()
+    """

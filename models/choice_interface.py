@@ -5,7 +5,7 @@ class ChoiceInterface:
     right or wrong.
 
     Instance variable(s):
-        p: JSON data, list containing a hashmap
+        p: JSON data, hashmap/python3 dictionary
     """
     def __init__(self):
         self.p = None

@@ -1,33 +1,66 @@
-img {
-  max-width: 150px;
+/* HOME PAGE */
+button.start-game {
+  padding: 1rem 10px;
+  font-size: 16pt;
+  background: #42fff6;
 }
+
+h1.intro {
+  font-size: 26pt;
+}
+
+/* TRIVIA PAGE */
 #posi-choices {
   display: grid;
   grid-template-columns: 1fr;
 }
-#escape {
-  z-index: 100;
-}
+
 .t-f {
   display: grid;
   grid-template-columns: 1fr;
 }
+
 label {
   font-size: 16pt!important;
   padding: 1rem;
 }
+
+/* GENERAL STYLING */
 .text-left {
   text-align: left!important;
 }
+
 .display-flex {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.correct {
+  background: green;
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.incorrect {
+  background: red;
+  text-align: center;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.btn-common {
+  padding: 1rem 10px;
+  background: #42fff6;
+  border-radius: 5px;
 }
 
 /* 
-Vertically center div by StackOverflow user Billbad 
+Vertically center div by StackOverflow user Billbad
 https://stackoverflow.com/questions/396145/how-to-vertically-center-a-div-element-for-all-browsers-using-css#:~:text=you%20need%20to%20set%20the,specify%20the%20top%20as%2050%25.
 */
+
 .outer {
   display: table;
   position: absolute;

@@ -2,19 +2,24 @@
 {% block content %}
 <div class="outer">
 	<div class="middle">
-		<div class="inner">
+		<div class="inner text-left">
 			{% if ans[1] == ans[2] %}
-				<img src="{{ url_for('static', filename='images/Correct.png') }}" alt="correct">
+				<div class="correct">
+					<h1>Correct!</h1>
+				</div>
 				{% else %}
-				<img src="{{ url_for('static', filename='images/Incorrect.png') }}" alt="incorrect">
+				<div class="incorrect">
+					<h1>Incorrect</h1>
+				</div>
 			{% endif %}
-			<h1>{{ ans[0] }}</h1>
-			<h2>Your answer was: {{ ans[1] }}</h1>
-			<h2>The correct answer was...</h2>
-			<h2>{{ ans[2] }}</h2>
+			<h2>{{ ans[0] }}</h2>
+			<h2>The correct answer was: {{ ans[1] }}</h2>
+			<h2>Your answer was: {{ ans[2] }}</h1>
 			<div class="display-flex">
 				<a href="/">Exit</a>
-				<button><a href="/rq">Next Question</a></button>
+				<button class="btn-common">
+					<a href="/rq">Next Question</a>
+				</button>
 			</div>
 		</div>
 	</div>
