@@ -4,7 +4,6 @@ import RPi.GPIO as GPIO
 import time, json, random, requests
 from models.choice_interface import ChoiceInterface
 
-
 app = Flask(__name__)
 interface = ChoiceInterface()
 
@@ -33,17 +32,15 @@ def check_answer():
     ans.append(data[0]["correct_answer"])
     ans.append(user_inp)
 
+    # show the player their results
     if data[0]["correct_answer"] != user_inp:
-        print("USER'S ANSWER:", ans[0])
-        print("CORRECT ANSWER:", ans[1])
         taze()
         return render_template("result.html", ans=ans)
     else:
-        print("USER'S ANSWER:", ans[0])
-        print("CORRECT ANSWER:", ans[1])
         return render_template("result.html", ans=ans)
 
 
+# TODO use web sockets to enable each end user to view the same question
 @app.route("/rq")
 def show_question():
     # returns a webpage of a random trivia question
@@ -52,6 +49,7 @@ def show_question():
     params = res.json()["results"][0]
     params = [dict(params)]
     interface.setPossibilities(params)
+    # TODO escape html codes in params
     return render_template("trivia.html", params=params)
 
 

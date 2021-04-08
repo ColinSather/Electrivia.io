@@ -1,5 +1,9 @@
+#!/usr/bin/env python3
+"""
+This script is only for testing new concepts/ideas
+"""
 import RPi.GPIO as GPIO
-import time, random
+import time, random, base64
 
 quiz = {
     "response_code":0,
@@ -29,9 +33,16 @@ def tazed():
     GPIO.cleanup()
 
 
+def based(message):
+    message_bytes = message.encode('ascii')
+    base64_message = message_bytes.decode('ascii')
+    print(base64_message)
+
+
 if __name__ == "__main__":
     for q in quiz['results']:
-        print(q['question'])
+        message = based(q['question'])
+        print(message)
         ans = q['correct_answer']
         choices = q['incorrect_answers']
         choices.append(ans)

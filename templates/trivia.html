@@ -1,14 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
+<div class="display-flex r-cols">
+    <h3>Category: {{ params[0].category }}</h3>
+    <h3>Difficulty: {{ params[0].difficulty }}</h3>
+</div>
 <div class="outer">
-<a href="/">Exit</a>
     <div class="middle">
         <form method="post" action="/check-answer" class="inner text-left">
             {% for row in params %}
-                <div class="display-flex">
-                    <h3>Category: {{ row.category }}</h3>
-                    <h3>Difficulty: {{ row.difficulty }}</h3>
-                </div>
                 <h2>{{ row.question }}</h2>
                 {% if row.type == 'multiple' %}
                     <div id="posi-choices">
@@ -36,12 +35,15 @@
                 </div>
                 {% endif %}
                 <br>
-                <input type="submit" value="Submit Answer">
-
+                <div class="display-flex">
+                    <a href="/" id="escape">Exit</a>
+                    <input type="submit" value="Submit Answer">
+                </div>
             {% endfor %}
         </form>
     </div>
 </div>
+
 <script>
     var radios = document.getElementById('posi-choices');
     for (var i = radios.children.length; i >= 0; i--) {
