@@ -51,9 +51,13 @@
     function trollRedirect() {
         var ask = window.confirm("Are you sure you want to quit this game?");
         if (ask) {
-            window.alert("This post was successfully deleted.");
-
-            window.location.href = "/";
+            var ask = window.confirm("Nah, you love this game. Wanna keep playing?");
+            if (ask)
+                var ask = window.confirm("Now you're starting to get on my nerves. Click yes to continue playing...");
+                if (ask)
+                    var ask = window.confirm("I'll give you $10,000 cash to keep playing");
+                    if (ask)
+                        window.location.href = "/";
 
         }
     }
