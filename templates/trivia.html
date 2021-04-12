@@ -35,7 +35,7 @@
             {% endif %}
             <br>
             <div class="display-flex">
-                <a href="#" onclick="trollRedirect();">Exit</a>
+                <a href="/">Exit</a>
                 <input class="btn-common" type="submit" value="Submit Answer">
             </div>
         </form>
@@ -46,16 +46,6 @@
     var radios = document.getElementById('posi-choices');
     for (var i = radios.children.length; i >= 0; i--) {
         radios.appendChild(radios.children[Math.random() * i | 0]);
-    }
-
-    function trollRedirect() {
-        var ask = window.confirm("Are you sure you want to quit this game?");
-        if (ask) {
-            window.alert("This post was successfully deleted.");
-
-            window.location.href = "/";
-
-        }
     }
 </script>
 {% endblock %}
