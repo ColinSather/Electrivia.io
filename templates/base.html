@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
     <title>Dystopian Trivia</title>
+    <style>
+@font-face { font-family: Funtasia; src: url("{{url_for('static', filename='Funtasia.otf')}}"); } 
+      h1.intro {
+         font-family: Funtasia;
+      }
+    </style>
 </head>
 <body>
     {% block content %}

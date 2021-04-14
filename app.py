@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from flask import Flask, render_template, request, redirect
-#import RPi.GPIO as GPIO
+import RPi.GPIO as GPIO
 import time, json, random, requests, base64
 from models.choice_interface import ChoiceInterface
 
