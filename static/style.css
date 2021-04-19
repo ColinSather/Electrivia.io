@@ -27,13 +27,13 @@ label {
   padding: 1rem;
 }
 
-/* GENERAL STYLING */
+/* GENERAL STYLINGS */
 body {
 	background: #f1f1f1;
+  margin: 0;
 }
-.text-left {
-  text-align: left!important;
-}
+.text-left { text-align: left!important; }
+.text-center { text-align: center!important; }
 
 .display-flex {
   display: flex;
@@ -44,6 +44,38 @@ body {
   background: #fff;
 }
 
+
+.btn-common {
+  border: none;
+  cursor: pointer;
+  padding: 1rem 10px;
+  background: #42fff6;
+  border-radius: 5px;
+}
+
+/* Vertical align with grid display */
+.grid-layout {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  align-items: center;
+  height: 100vh;
+}
+
+.inner {
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 10px;
+  background: #fff;
+  padding: 3rem 1rem;
+}
+
+.quiz-footer {
+  margin: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+/* RESULTS VIEWS */
 .correct {
   background: green;
   text-align: center;
@@ -58,44 +90,6 @@ body {
   border-radius: 10px;
 }
 
-.btn-common {
-  border: none;
-  cursor: pointer;
-  padding: 1rem 10px;
-  background: #42fff6;
-  border-radius: 5px;
-}
-
-/* 
-Vertically center div by StackOverflow user Billbad
-https://stackoverflow.com/questions/396145/how-to-vertically-center-a-div-element-for-all-browsers-using-css#:~:text=you%20need%20to%20set%20the,specify%20the%20top%20as%2050%25.
-*/
-
-.outer {
-  display: table;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-  
-.middle {
-  display: table-cell;
-  vertical-align: middle;
-      padding: 0 10px;
-}
-
-.inner {
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  text-align: center;
-  border-radius: 10px;
-  background: #fff;
-  padding: 3rem 1rem;
-}
-
 @media (max-width: 400px) {
    .middle {
     padding: 0 10px;
@@ -105,5 +99,9 @@ https://stackoverflow.com/questions/396145/how-to-vertically-center-a-div-elemen
   }
   .display-flex.r-cols {
     display: block;
+  }
+  .quiz-footer {
+    margin: 0px .2em;
+    margin-bottom: 1rem;
   }
 }

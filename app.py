@@ -22,7 +22,7 @@ def taze():
 def convert_base64_hm(paramd):
     """
     Converts a base64 JSON hash map into a plain text JSON hash map
-    param64: hashmap - base64 data with plain text keys
+    paramd [type: hashmap]: base64 data with plain text keys
     """
     hm = {}
     incorrect_answers = []
@@ -42,13 +42,11 @@ def convert_base64_hm(paramd):
     return hm
 
 
-@app.route("/")
-def index():
-    return render_template("home.html")
-
-
 @app.route("/check-answer", methods=['POST'])
 def check_answer():
+    """
+    Sends result of the question attempt to the results view.
+    """
     user_inp = str(request.values["choice"])
     data = interface.getPossibilities()
     ans = []
@@ -56,7 +54,7 @@ def check_answer():
     ans.append(data["correct_answer"])
     ans.append(user_inp)
 
-    # show the player their results
+    # show the player their results and taze if incorrect
     if data["correct_answer"] != user_inp:
         taze()
         return render_template("result.html", ans=ans)
@@ -66,8 +64,10 @@ def check_answer():
 
 @app.route("/rq")
 def random_question():
-    # TODO use web sockets to enable each end user to view the same question
-    # returns a webpage of a random trivia question
+    """
+    returns a webpage of a random trivia question from opentdb
+    """
+    # ENHANCEMENT: use web sockets to enable each end user to view the same question
     api = "https://opentdb.com/api.php?amount=1&encode=base64"
     req = requests.get(api)
     raw_data = req.json()
@@ -75,6 +75,11 @@ def random_question():
     params = convert_base64_hm(raw_data)
     interface.setPossibilities(params)
     return render_template("trivia.html", params=params)
+
+
+@app.route("/")
+def index():
+    return render_template("home.html")
 
 
 if __name__ == "__main__":

@@ -19,6 +19,14 @@ Triva API data courtesy of Open Triva DB: https://opentdb.com/api_config.php
 * User gets shocked if the page is refreshed on an incorrect answer results page
 
 ## Notes to self
+4/16/2021
+To set up local dev server in centos use the below commands.
+
+```
+sudo firewall-cmd --runtime-to-permanent
+sudo firewall-cmd --zone=public --add-port=5000/tcp
+```
+
 3/31/2021
 I've decided to do everything server side. I'm sure there are some benefits for client side rendering, in fact I like the idea of handling all the JSON logic all on the front end and having the backend simply do iOT stuff. However I think implementing a front end javascript framework such as React js would be overkill. 
 

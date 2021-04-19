@@ -1,44 +1,42 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="display-flex r-cols">
-    <h3>Category: {{ params.category }}</h3>
-    <h3>Difficulty: {{ params.difficulty }}</h3>
-</div>
-<div class="outer">
-    <div class="middle">
-        <form method="post" action="/check-answer" class="inner text-left">
-            <h2>{{ params.question }}</h2>
-            {% if params.type == 'multiple' %}
-                <div id="posi-choices">
-                    {% for c in params.incorrect_answers %}
-                        <label>
-                            <input type='radio' value='{{c}}' name='choice' required/>
-                            {{c}}
-                        </label>
-                    {% endfor %}
+<div class="grid-layout">
+    <form method="post" action="/check-answer" class="inner text-left">
+        <h2>{{ params.question }}</h2>
+        {% if params.type == 'multiple' %}
+            <div id="posi-choices">
+                {% for c in params.incorrect_answers %}
                     <label>
-                        <input type='radio' value='{{params.correct_answer}}' name='choice'/>
-                        {{params.correct_answer}}
+                        <input type='radio' value='{{c}}' name='choice' required/>
+                        {{c}}
                     </label>
-                </div>
-                {% else %}
-            <div class="t-f">
-                    <label>
-                        <input type='radio' value='True' name='choice' required/>
-                        True
-                    </label>
-                    <label>
-                        <input type='radio' value='False' name='choice'/>
-                        False
-                    </label>
+                {% endfor %}
+                <label>
+                    <input type='radio' value='{{params.correct_answer}}' name='choice'/>
+                    {{params.correct_answer}}
+                </label>
             </div>
-            {% endif %}
-            <br>
-            <div class="display-flex">
-                <a href="/">Exit</a>
-                <input class="btn-common" type="submit" value="Submit Answer">
-            </div>
-        </form>
+            {% else %}
+        <div class="t-f">
+            <label>
+                <input type='radio' value='True' name='choice' required/>
+                True
+            </label>
+            <label>
+                <input type='radio' value='False' name='choice'/>
+                False
+            </label>
+        </div>
+        {% endif %}
+        <br>
+        <div class="display-flex">
+            <a href="/">Exit</a>
+            <input class="btn-common" type="submit" value="Submit Answer">
+        </div>
+    </form>
+    <div class="display-flex r-cols quiz-footer">
+        <h3>Category: {{ params.category }}</h3>
+        <h3>Difficulty: {{ params.difficulty }}</h3>
     </div>
 </div>
 
