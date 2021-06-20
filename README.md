@@ -19,6 +19,9 @@ Triva API data courtesy of Open Triva DB: https://opentdb.com/api_config.php
 * User gets shocked if the page is refreshed on an incorrect answer results page
 
 ## Notes to self
+6/20/2021
+I am considering re-writting this project as a Java Spring application. Using Java will make this project slightly faster which is necessary considering it's running on a raspberry pi. In addition, the Java re-write will be a good learning opportunity.
+
 4/16/2021
 To set up local dev server in centos use the below commands.
 
