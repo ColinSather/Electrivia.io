@@ -1,4 +1,4 @@
-# Dystopian Trivia
+# Electrivia
 A trivia game that electrocutes people...
 
 Triva API data courtesy of Open Triva DB: https://opentdb.com/api_config.php
