@@ -2,3 +2,4 @@ env/
 .vscode/
 __pycache__/
 models/__pycache__/
+SocketioServer/node_modules/
