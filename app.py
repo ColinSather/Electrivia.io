@@ -7,9 +7,8 @@ from models.choice_interface import ChoiceInterface
 app = Flask(__name__)
 interface = ChoiceInterface()
 
-
 def taze():
-    """ Opens relay for 2 secs"""
+    # Opens relay for 2 secs
     led1 = 23
     GPIO.setmode(GPIO.BCM)
     GPIO.setup(led1, GPIO.OUT)
@@ -17,7 +16,6 @@ def taze():
     time.sleep(2)
     GPIO.output(led1, GPIO.LOW)
     GPIO.cleanup()
-
 
 def convert_base64_hm(paramd):
     """
@@ -56,7 +54,7 @@ def check_answer():
 
     # show the player their results and taze if incorrect
     if data["correct_answer"] != user_inp:
-        taze()
+        #taze()
         return render_template("result.html", ans=ans)
     else:
         return render_template("result.html", ans=ans)
@@ -65,7 +63,7 @@ def check_answer():
 @app.route("/rq")
 def random_question():
     """
-    returns a webpage of a random trivia question from opentdb
+    Returns a webpage of a random trivia question from opentdb
     """
     # ENHANCEMENT: use web sockets to enable each end user to view the same question
     api = "https://opentdb.com/api.php?amount=1&encode=base64"

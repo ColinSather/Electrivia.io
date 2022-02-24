@@ -17,24 +17,25 @@ app.get('/', (req, res) => {
 //    res.sendFile(__dirname + '/rooms.html');
 //});
 
+// create staticly named rooms
+io.of("/").adapter.on("create-room", (room = 'test') => {
+    console.log(`room ${room} was created`);
+});
+
 io.on('connection', (socket) => {
 
-    // temp join some room and print each room available
-    socket.join('some room');
-    var counter = 0;
-
-    socket.rooms.forEach(r => {
-        if (counter > 0)    
-            console.log(r);
-        counter += 1;
-    });
 
     app.get('/rooms', (req, res) => {
-        //var room_data = socket.rooms;
-        //res.render('rooms.ejs');
+        var counter = 0;
+        var rooms_arr = [];
+        
+        socket.rooms.forEach(r => {
+            if (counter > 0)    
+                rooms_arr.push(r);
+            counter += 1;
+        });
 
-        //var roomData = "roomData";
-        res.render('rooms.ejs', {"roomData": socket.rooms});
+        res.render('rooms.ejs', {"roomData": rooms_arr});
     });
 
     // below 2 are websocket specific functions
